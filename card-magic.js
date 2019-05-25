@@ -12,6 +12,16 @@ const createDeck = () => {
 
 const cardMagic = () => {
   var deck = createDeck();
+  console.log("\nPICK A NUMBER\n");
+  deck.forEach((card, index)=> {
+    process.stdout.write(card + "\t");
+    if ((index + 1) % 7 === 0) {
+      console.log("");
+    }
+  })
+
+  console.log("\nPress anything");
+  scanf("%s");
   for (var i = 0; i < 4; i++) {
     var head = distributeCard(deck);
     print(head);
@@ -58,7 +68,7 @@ function print(head) {
     array.push(temp);
     temp = temp.next;
   } while (temp != head);
-  console.log("________________________\n");
+  console.log("\n________________________\n");
   console.log("Group1\t|Group2\t|Group3\t|\n________________________")
   for (var i = 0; i < head.card.length; i++) {
     console.log(array[0].card[i]+ '\t|' + array[1].card[i] + '\t|' +array[2].card[i] + '\t|');
