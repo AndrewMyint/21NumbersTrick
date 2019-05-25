@@ -3,7 +3,7 @@ const ClinkedList = require('./doublyCircularLinkedList.js').ClinkedList;
 
 const createDeck = () => {
   var deck = [];
-  for (var i = 0; i < 42; i++) {
+  for (var i = 0; i < 21; i++) {
     var num = randomize(deck);
     deck.push(num);
   }
@@ -15,14 +15,14 @@ const cardMagic = () => {
   for (var i = 0; i < 4; i++) {
     var head = distributeCard(deck);
     print(head);
-    console.log("Which Group has your card? ");
+    console.log("\nWhich Group has your card? ");
     let group = scanf('%d');
     head = changeHead(head, group);
     deck = takeBackTheCards(head);
   }
   console.log("The moment of the truth.. are you READY ???");
   scanf('%s');
-  console.log("Easy Guess, your card is.... [",deck[20],"]")
+  console.log("Easy Guess, your card is.... [",deck[10],"]")
 }
 
 const distributeCard = (deck) => {
