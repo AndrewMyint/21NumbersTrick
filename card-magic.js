@@ -22,7 +22,7 @@ const cardMagic = () => {
   }
   console.log("The moment of the truth.. are you READY ???");
   scanf('%s');
-  console.log("Easy Guess, your card is.... [",deck[10],"]")
+  console.log("EZ Guess, your card is.... [",deck[10],"]")
 }
 
 const distributeCard = (deck) => {
